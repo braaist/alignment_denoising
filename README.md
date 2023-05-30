@@ -1,5 +1,5 @@
 # NOISY effectivity analysis 
-This repository was created for a project to test the effectiveness of the NOISY program. 
+This repository was created for a project testing the effectiveness of the NOISY program. 
 
 You may find 3 categories of files here:
   * Python scripts and notebooks
