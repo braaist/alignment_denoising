@@ -1,6 +1,7 @@
 import mysql.connector as mariadb
 import csv
 import itertools
+PREFIX = "/data/ruslan_gumerov/"
 
 
 if __name__ == "__main__":
@@ -24,7 +25,7 @@ if __name__ == "__main__":
     mariadb_connection.commit()
 
     # Open the file and read it in chunks
-    with open('/data/ruslan_gumerov/swisspfam', 'r') as file:
+    with open(f"{PREFIX}swisspfam", 'r') as file:
         csv_reader = csv.reader(file, delimiter='\t')
         chunk_num = 0
         for chunk in iter(lambda: list(itertools.islice(csv_reader, 10000)), []):
@@ -66,7 +67,7 @@ if __name__ == "__main__":
             mariadb_connection.commit()
             
     #Split the table into separated tables for each species
-    mnemonics = pd.read_csv("/home/ruslan_gumerov/noisy/mnemonic_taxid_df.csv", index_col = 0)
+    mnemonics = pd.read_csv(f"{PREFIX}noisy/mnemonic_taxid_df.csv", index_col = 0)
 
     for tax in mnemonics["swisspfam_mnemonic"]:
         cursor.execute(f"CREATE TABLE {tax} (organism_code VARCHAR(255),"

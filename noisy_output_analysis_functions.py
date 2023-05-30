@@ -103,4 +103,3 @@ def create_difference_dataframe(rf_df_denoised, rf_df_original):
     rf_out_df["cutoff_percent"] = (rf_out_df["RF_original_length"] - rf_out_df["RF_denoised_length"])/rf_out_df["RF_original_length"]
     return rf_out_df
 
-

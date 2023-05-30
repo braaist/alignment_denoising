@@ -1,5 +1,5 @@
 #get main df
-from noisy_ds_construction_functions import *
+from ../noisy_ds_construction_functions import *
 import mysql.connector as mariadb
 import pandas as pd
 import polars as pl

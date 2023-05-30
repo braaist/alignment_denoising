@@ -1,6 +1,7 @@
 from NOISY_reference_tree_construction_functions import *
 import mysql.connector as mariadb
 import pandas as pd
+PREFIX = "/data/ruslan_gumerov/"
 
 #Creation of Pfam data table
 if __name__ == "__main__":
@@ -24,4 +25,4 @@ if __name__ == "__main__":
     mnemonic_taxid_df = pd.DataFrame({"swisspfam_mnemonic" : mnemonics,
                            "tax_id" : swisspfam_id})
 
-    mnemonic_taxid_df.to_csv("/home/ruslan_gumerov/noisy/mnemonic_taxid_df.csv")
+    mnemonic_taxid_df.to_csv(f"{PREFIX}noisy/mnemonic_taxid_df.csv")
