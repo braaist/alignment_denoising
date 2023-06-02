@@ -1,6 +1,10 @@
 # NOISY effectivity analysis 
 This repository was created for a project testing the effectiveness of the NOISY program. 
 
+# Analysis scheme
+![alt text](https://github.com/braaist/alignment_denoising/blob/main/thesis_scheme.png?raw=true)
+
+# Description
 You may find 3 categories of files here:
   * Python scripts and notebooks
   * Directories
@@ -31,4 +35,3 @@ You may find 3 categories of files here:
 
 ## Additional comments and side notes :warning:
   * Please note, that on the current stage the project is not 100% reproducible on one click. Additional tuning of the relative and absolute paths will be required. 
-  * TODO: Project scheme and description.
